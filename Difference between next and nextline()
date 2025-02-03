@@ -1,0 +1,36 @@
+In Java, `next()` and `nextLine()` are two different methods used to read input from the user.
+
+*next()*
+- `next()` reads the next token (word or number) from the input.
+- It stops reading when it encounters a whitespace character (space, tab, newline, etc.).
+- It returns a `String` object.
+
+*nextLine()*
+- `nextLine()` reads the entire line of input, including whitespace characters.
+- It stops reading when it encounters a newline character (`\n`).
+- It returns a `String` object.
+
+Here's an example to illustrate the difference:
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your name:");
+        String name = scanner.next(); // reads only the first word
+        System.out.println("Name: " + name);
+
+        System.out.println("Enter your address:");
+        scanner.nextLine(); // consume the newline character
+        String address = scanner.nextLine(); // reads the entire line
+        System.out.println("Address: " + address);
+    }
+}
+```
+
+In this example, when you enter your name, `next()` reads only the first word. When you enter your address, `nextLine()` reads the entire line, including whitespace characters.
+
+Note that after calling `next()`, you need to call `nextLine()` to consume the newline character before reading the next line of input.
