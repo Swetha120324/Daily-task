@@ -1,0 +1,20 @@
+CODE :
+
+public class person {
+		String Name;
+		int age;
+		public void introduce(String Name,int age) {
+		System.out.println("Name: "+Name);
+		System.out.println("Age: "+age);
+		System.out.println("Welcome " + Name);
+}
+		public static void main(String[]args) {
+			person p = new person();
+			p.introduce("Shamini",19);
+		}
+}
+
+OUTPUT:
+Name: Shamini
+Age: 19
+Welcome Shamini
