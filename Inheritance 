@@ -1,0 +1,36 @@
+class Vehicle {
+
+    public void start() {
+        System.out.println("Vehicle is starting...");
+    }
+}
+
+
+class Car extends Vehicle {
+
+    public void start() {
+        System.out.println("Car engine is starting...");
+    }
+}
+
+
+class Bike extends Vehicle {
+
+    public void start() {
+        System.out.println("Bike engine is starting...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle myVehicle1 = new Car();
+        myVehicle1.start(); 
+        Vehicle myVehicle2 = new Bike();
+        myVehicle2.start(); 
+        Vehicle myVehicle = new Vehicle();
+        myVehicle.start(); 
+
+
+    }
+}
