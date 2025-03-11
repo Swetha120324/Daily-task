@@ -9,7 +9,7 @@ this.capacity capacity;
 
 void displayBattery Info() {
 
-System.out.println("Battery Capacity:" + capacity + mAh");
+System.out.println("Battery Information: " + capacity);
 
 }
 
@@ -17,13 +17,13 @@ System.out.println("Battery Capacity:" + capacity + mAh");
 
 class Mobile (
 
-Battery battery; // Composition Mobile "has-a" Battery
-
-Mobile(int batteryCapacity) { this.battery new Battery(batteryCapacity);
+Battery battery; 
+Mobile(int batteryCapacity) { 
+this.battery new Battery(batteryCapacity);
 
 void displayMobileInfo() {
 
-System.out.println("Mobile Details:");
+System.out.println("Mobile Information:");
 
 battery.displayBatteryInfo(); }
 
@@ -42,5 +42,5 @@ myPhone.displayMobileInfo();
 }
 
 OUTPUT:
-Mobile Details:
-Battery Capacity: 5000 MAh
+Mobile Information:
+Battery Information: 5000 
