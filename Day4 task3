@@ -1,0 +1,46 @@
+CODE:
+class Battery [
+
+int capacity;
+
+Battery (int capacity) {
+
+this.capacity capacity;
+
+void displayBattery Info() {
+
+System.out.println("Battery Capacity:" + capacity + mAh");
+
+}
+
+}
+
+class Mobile (
+
+Battery battery; // Composition Mobile "has-a" Battery
+
+Mobile(int batteryCapacity) { this.battery new Battery(batteryCapacity);
+
+void displayMobileInfo() {
+
+System.out.println("Mobile Details:");
+
+battery.displayBatteryInfo(); }
+
+public class Mainl
+
+public static void main(String[] args) {
+
+Mobile myPhone new Mobile(5000);
+
+myPhone.displayMobileInfo();
+
+}
+
+}
+
+}
+
+OUTPUT:
+Mobile Details:
+Battery Capacity: 5000 MAh
