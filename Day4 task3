@@ -27,7 +27,7 @@ System.out.println("Mobile Information:");
 
 battery.displayBatteryInfo(); }
 
-public class Mainl
+public class Mainl{
 
 public static void main(String[] args) {
 
