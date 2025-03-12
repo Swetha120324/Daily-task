@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.List;
+class Employee {
+    private String name;
+    private int id;
+    public Employee(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+}
+class Department {
+    private String departmentName;
+    private List<Employee> employees;
+
+    public Department(String departmentName) {
+        this.departmentName = departmentName;
+        this.employees = new ArrayList<>();
+    }
+
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
+
+    public void removeEmployee(Employee employee) {
+        employees.remove(employee);
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a department
+        Department department = new Department("HR");
+        Employee employee1 = new Employee("John Doe", 1);
+        Employee employee2 = new Employee("Jane Doe", 2);
+
+                department.addEmployee(employee1);
+        department.addEmployee(employee2);
+        System.out.println("Department Name: " + department.getDepartmentName());
+        System.out.println("Employees: ");
+        for (Employee employee : department.getEmployees()) {
+            System.out.println("Name: " + employee.getName() + ", ID: " + employee.getId());
+        }
+    }
+}
