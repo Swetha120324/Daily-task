@@ -1,0 +1,65 @@
+CODE:
+class Computer {
+    String brand;
+    int memory;
+    public Computer(String brand, int memory) {
+        this.brand = brand;
+        this.memory = memory;
+    }
+    class Processor {
+        String processorBrand;
+        double processorSpeed;
+        public Processor(String processorBrand, double processorSpeed) {
+            this.processorBrand = processorBrand;
+            this.processorSpeed = processorSpeed;
+        }
+
+        public void displayInfo() {
+            System.out.println("Processor: " + processorBrand + ", Speed: " + processorSpeed + " GHz");
+        }
+    }
+
+    public void showDetails() {
+        System.out.println("Computer Brand: " + brand + ", Memory: " + memory + " GB");
+    }
+}
+class LocalInnerClassExample {
+    public void showMessage() {
+        class LocalInner {
+            void display() {
+                System.out.println("This is a local inner class.");
+            }
+        }
+        LocalInner localInner = new LocalInner();
+        localInner.display();
+    }
+}
+
+interface Runnable {
+    void run();
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Computer computer = new Computer("Dell", 16);
+        computer.showDetails();
+        Computer.Processor processor = computer.new Processor("Intel", 3.5);
+        processor.displayInfo();
+
+        LocalInnerClassExample localExample = new LocalInnerClassExample();
+        localExample.showMessage();
+        Runnable myRunnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Running in an anonymous inner class.");
+            }
+        };
+        myRunnable.run();
+    }
+}
+
+OUTPUT:
+Computer Brand: Dell, Memory: 16 GB
+Processor: Intel, Speed: 3.5 GHz
+This is a local inner class.
+Running in an anonymous inner class.
